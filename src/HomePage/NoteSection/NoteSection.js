@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Store from '../../Store/Store'
+import moment from 'moment'
 
 
 export default class NoteSection extends React.Component{
@@ -13,10 +14,11 @@ export default class NoteSection extends React.Component{
             
                     <li key={note.id}>
                         <Link to={`/note/${note.id}`}>{note.name}</Link> 
-                        <span>{note.modified}</span>
+                        <span>date modified: {moment(note.modified).format('MMMM Do YYYY')}</span>
 
                     </li>
                     )}
+                    <button className="addNoteButton">Add note</button>
                 </ul>
             </section>
         )

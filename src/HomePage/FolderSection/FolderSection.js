@@ -18,7 +18,7 @@ export default class FolderSection extends React.Component {
                    
                 </li>
                 )}
-               
+               <button className="addFolder">Add folder</button>
             </ul>
         )
     }

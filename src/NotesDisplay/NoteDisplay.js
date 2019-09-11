@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
 export default class NoteDisplay extends React.Component{
@@ -11,7 +12,12 @@ export default class NoteDisplay extends React.Component{
         return(
     
             <div className="notesList">
-                {filterNotes.map(note => <p key={note.id}>{note.name}</p>)}
+                {filterNotes.map(note => 
+                <li key={note.id}>
+                    <Link to={`/note/${note.id}`} key={note.id}>{note.name}</Link>
+                </li>
+                )}
+                <button className="add-to-folder">Add Note</button>
             </div>
          
         )
