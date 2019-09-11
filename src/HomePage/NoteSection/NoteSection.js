@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import Store from '../../Store/Store'
 
 
@@ -12,8 +12,9 @@ export default class NoteSection extends React.Component{
                     {Store.notes.map((note) =>
             
                     <li key={note.id}>
-                        {note.name}
+                        <Link to={`/note/${note.id}`}>{note.name}</Link> 
                         <span>{note.modified}</span>
+
                     </li>
                     )}
                 </ul>

@@ -4,6 +4,8 @@ import NoteSection from './HomePage/NoteSection/NoteSection'
 import './App.css';
 import NoteDisplay from './NotesDisplay/NoteDisplay'
 import FolderSection from './HomePage/FolderSection/FolderSection'
+import Note from './HomePage/NoteSection/Note/Note'
+
 
 
 class App extends React.Component {
@@ -18,11 +20,14 @@ class App extends React.Component {
 
           <Route path='/' component={FolderSection}/>
           <Route exact path='/' component={NoteSection} />
-          <Route exact path='/:folderId' render={ (routeProps) => 
-            <NoteDisplay notes={this.props.store.notes} 
+          
+          <Route exact path='/note/:noteId' render={ (routeProps) => 
+            <Note selectedNote={this.props.store.notes} 
             { ...routeProps} />} />
 
-          
+          <Route exact path='/folder/:folderId' render={ (routeProps) => 
+            <NoteDisplay notes={this.props.store.notes} 
+            { ...routeProps} />} />
 
         </main>
 

@@ -14,7 +14,7 @@ export default class FolderSection extends React.Component {
         
                 <li key={folder.id}>
                     
-                    <Link to={`/${folder.id}`}>{folder.name}</Link> 
+                    <Link to={`/folder/${folder.id}`}>{folder.name}</Link> 
                    
                 </li>
                 )}
