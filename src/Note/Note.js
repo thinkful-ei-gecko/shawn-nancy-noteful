@@ -12,3 +12,6 @@ export default class Note extends React.Component{
     }
 
 }
+
+
+//const note = Object.keys(this.props.notes).map()

@@ -1,12 +1,14 @@
 import React from 'react';
 import NoteSection from './NoteSection/NoteSection'
 import FolderSection from './FolderSection/FolderSection'
+
 import './App.css';
 
 class App extends React.Component {
 
  
   render() {
+    console.log(this.props);
     return (
       <div className="App">
         <a href="/">Noteful</a>
