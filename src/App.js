@@ -15,7 +15,7 @@ class App extends React.Component {
     console.log(this.store);
     return (
       <div className="App">
-        <Link to="/">Noteful</Link>
+        <Link to="/" className="header">Noteful</Link>
         <main className="app-container">
 
           <Route path='/' component={FolderSection}/>

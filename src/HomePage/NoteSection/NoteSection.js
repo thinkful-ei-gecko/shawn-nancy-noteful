@@ -12,10 +12,12 @@ export default class NoteSection extends React.Component{
                 <ul className="notesList">
                     {Store.notes.map((note) =>
             
-                    <li key={note.id}>
+                    <li className="singleNote" key={note.id}>
                         <Link to={`/note/${note.id}`}>{note.name}</Link> 
-                        <span>date modified: {moment(note.modified).format('MMMM Do YYYY')}</span>
-
+                        <div className="flex">
+                            <span>date modified on {moment(note.modified).format('Do MMMM YYYY')}</span>
+                            <button className="deleteButton">Delete Note</button>
+                        </div>
                     </li>
                     )}
                     <button className="addNoteButton">Add note</button>

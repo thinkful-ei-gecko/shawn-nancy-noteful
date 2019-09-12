@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Store from '../../Store/Store'
+import 'normalize.css'
 
 
 
